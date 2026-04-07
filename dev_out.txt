@@ -1,0 +1,17 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm.
+
+> frontend@0.0.0 dev
+> vite
+
+error when starting dev server:
+Error: listen EPERM: operation not permitted 127.0.0.1:5173
+    at Server.setupListenHandle [as _listen2] (node:net:1886:21)
+    at listenInCluster (node:net:1965:12)
+    at GetAddrInfoReqWrap.doListen [as callback] (node:net:2139:7)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:8) {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '127.0.0.1',
+  port: 5173
+}

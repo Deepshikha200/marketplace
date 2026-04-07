@@ -1,0 +1,134 @@
+@use "../../../assets/theme/_var.scss" as *;
+.dashboard {
+  font-size: 1.6rem;
+  padding: 3.2rem 0 4rem;
+
+  &_header {
+    margin-bottom: 2.4rem;
+
+    h1 {
+      margin: 0 0 0.8rem;
+      color: $textblack;
+      font-size: 3.2rem;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0;
+      color: $greyText;
+      font-size: 1.5rem;
+      line-height: 1.6;
+    }
+  }
+
+  &_card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border: 0.1rem solid rgba($black, 0.08);
+    box-shadow: 0 1.2rem 2.6rem rgba($black, 0.06);
+    padding: 1.4rem;
+    border-radius: 1.4rem;
+
+    &_img {
+      margin-bottom: 1.2rem;
+
+      img {
+        height: 24rem;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 1rem;
+        background: $textgray;
+      }
+    }
+
+    &_content {
+      h4 {
+        margin: 0 0 0.6rem;
+        color: $textblack;
+        font-size: 1.9rem;
+        line-height: 1.35;
+        font-weight: 600;
+      }
+    }
+
+    &_category {
+      margin: 0 0 0.8rem;
+      color: $blueClr;
+      font-size: 1.3rem;
+      line-height: 1.3;
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+
+    &_description {
+      margin: 0;
+      color: $greyText;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 6.4rem;
+    }
+
+    &_footer {
+      margin-top: auto;
+      padding-top: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    &_price {
+      margin: 0;
+      color: $textblack;
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    &_actions {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 2.4rem 0 3.2rem;
+
+    &_header {
+      h1 {
+        font-size: 2.8rem;
+      }
+    }
+
+    &_card {
+      &_img {
+        img {
+          height: 20rem;
+        }
+      }
+
+      &_price {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    &_card {
+      padding: 1.2rem;
+
+      &_actions {
+        .common_btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

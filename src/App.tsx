@@ -1,13 +1,10 @@
 
-import './index.scss'
+import { RouterProvider } from 'react-router-dom'
+import { createBrowserRoutes } from './routes/Routes'
 
 function App() {
-
-  return (
-    <>
-      <h1>MarketPlace</h1>
-    </>
-  )
+  const router = createBrowserRoutes()
+  return <RouterProvider router={router} />
 }
 
 export default App

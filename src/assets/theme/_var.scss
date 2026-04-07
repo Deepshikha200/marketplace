@@ -1,0 +1,21 @@
+// Light theme tokens used by shared Formik field components.
+// These are SCSS variables (not CSS vars) because your common inputs use `@use ... as *`.
+
+$white: #ffffff;
+$black: #000000;
+
+$textblack: #111827;
+$greyText: #6b7280;
+
+$textgray: #f3f4f6;
+$borderclr: #d1d5db;
+
+$blueClr: #4f79e3;
+$primaryclr: #4f79e3;
+
+$red: #ef4444;
+$scrollbarclr: #e5e7eb;
+
+%transition {
+  transition: all 0.3s ease-in-out;
+}

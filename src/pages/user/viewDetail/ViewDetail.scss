@@ -1,0 +1,134 @@
+@use "../../../assets/theme/_var.scss" as *;
+
+.view_detail {
+  padding: 3.2rem 0 4rem;
+
+  &_back {
+    margin-bottom: 1.8rem;
+  }
+
+  &_image {
+    background: $white;
+    border: 0.1rem solid rgba($black, 0.08);
+    border-radius: 1.4rem;
+    padding: 1.2rem;
+    box-shadow: 0 1.2rem 2.6rem rgba($black, 0.06);
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 42rem;
+      border-radius: 1rem;
+      object-fit: cover;
+      display: block;
+      background: $textgray;
+    }
+  }
+
+  &_content {
+    background: $white;
+    border: 0.1rem solid rgba($black, 0.08);
+    border-radius: 1.4rem;
+    padding: 2rem;
+    box-shadow: 0 1.2rem 2.6rem rgba($black, 0.06);
+    height: 100%;
+
+    h1 {
+      margin: 0 0 0.8rem;
+      font-size: 3rem;
+      line-height: 1.2;
+      font-weight: 600;
+      color: $textblack;
+    }
+  }
+
+  &_badge {
+    margin: 0 0 0.8rem;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $blueClr;
+    background: rgba($blueClr, 0.12);
+    border-radius: 9rem;
+  }
+
+  &_price {
+    margin: 0 0 1.2rem;
+    color: $textblack;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  &_description {
+    margin: 0 0 1.6rem;
+    color: $greyText;
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+
+  &_meta {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    li {
+      font-size: 1.4rem;
+      color: $textblack;
+
+      span {
+        color: $greyText;
+        margin-right: 0.6rem;
+      }
+    }
+  }
+
+  &_actions {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 991px) {
+    padding: 2.4rem 0 3.2rem;
+
+    &_image {
+      img {
+        height: 30rem;
+      }
+    }
+
+    &_content {
+      h1 {
+        font-size: 2.4rem;
+      }
+    }
+
+    &_price {
+      font-size: 2.2rem;
+    }
+  }
+
+  @media (max-width: 575px) {
+    &_image {
+      img {
+        height: 24rem;
+      }
+    }
+
+    &_content {
+      padding: 1.4rem;
+    }
+
+    &_actions {
+      .common_btn {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "../../../assets/theme/_var.scss" as *;
+
+.header {
+  padding: 0;
+  font-weight: 600;
+  background-color: $textblack;
+  color: $white;
+
+  &_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      img {
+        height: auto;
+        width: 10rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+}

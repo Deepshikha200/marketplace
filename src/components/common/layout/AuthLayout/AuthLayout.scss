@@ -1,0 +1,142 @@
+@use "../../../../assets/theme/_var.scss" as *;
+
+.auth_layout {
+  min-height: 100vh;
+  background: #f7f8fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4.8rem 1.6rem;
+
+
+  .auth_layout_content {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  .auth_section {
+    width: 100%;
+  }
+
+  .auth_panel {
+    background: $white;
+    border: .1rem solid rgba($black, 0.08);
+    border-radius: 1.8rem;
+    padding: 2.6rem 2.2rem;
+    box-shadow: 0.8rem 2.2rem rgba($black, 0.05);
+  }
+
+  .auth_panel_header {
+    text-align: center;
+    margin-bottom: 1.8rem;
+
+    .auth_panel_title {
+      margin: 0 0 .6rem;
+      font-size: 2.8rem;
+      line-height: 1.1;
+      font-weight: 600;
+      color: $textblack;
+      letter-spacing: -0.2rem;
+    }
+
+    .auth_panel_subtitle {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: $greyText;
+    }
+  }
+
+  .auth_form {
+    width: 100%;
+  }
+
+  .auth_primaryButton {
+    width: 100%;
+    height: 4.4rem;
+    border-radius: 1.2rem;
+    border: 0;
+    background: $primaryclr;
+    color: $white;
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .auth_secondaryRow {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .auth_textLink {
+    font-size: 1.4rem;
+    color: $primaryclr;
+    text-decoration: underline;
+    cursor: pointer;
+    line-height: 1.4;
+
+    &--muted {
+      color: $greyText;
+      text-decoration: none;
+    }
+  }
+  .auth_submitRow {
+    margin-top: 1.4rem;
+  }
+
+  .auth_switchRow {
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    flex-wrap: wrap;
+    color: $greyText;
+    font-size: 1.4rem;
+    line-height: 1.4;
+
+    .auth_switchLink {
+      color: $primaryclr;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  }
+
+  @media (min-width: 102.4rem) {
+    padding: 6.4rem 2.4rem;
+
+    .auth_layout_inner {
+      grid-template-columns: 1fr 52rem;
+      gap: 5.4rem;
+    }
+
+    .auth_layout_hero {
+      display: block;
+    }
+
+    .auth_layout_content {
+      max-width: 52rem;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 36rem) {
+    .auth_panel {
+      padding: 2.2rem 1.6rem;
+      border-radius: 1.6rem;
+    }
+  }
+}
